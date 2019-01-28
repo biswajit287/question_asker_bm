@@ -1,13 +1,34 @@
 
-This library can be used to create a multiple choice question wizard CLI in dart
-To use this library--
-    #import the library in your project
-    #Create an object of Promter class
-    #Use the aksMultiple and askBinary function to ask a question
+question_asker_bm
+This library can be used to create a multiple choice and yes/no type question wizard CLI in dart
 
-    #example code with explanation: 
+Usage
+Import the package
+To use this plugin, follow the plugin installation instructions.
 
-        void main()
+Use the Library
+Add the following import to your Dart code:
+
+import 'package:question_asker_bm/question_asker_bm.dart';
+Instantiate Promter() with the scopes you want:
+
+final promter = new Promter();
+
+List of Methods you can use: 
+    1. askMultiple(question,options)
+        => First argument is the question to ask
+        => Second argument is the list of answers(options) for the given question
+        Note: This function returns the option selected by the user
+    
+    2. askBinary(question)
+        => Takes an argument as the question to ask
+        Note: This function return either TRUE or FALSE based on the value selected by the user. 
+                a) This returns true if user type y or yes 
+                b) This returns flase if user type f or false 
+
+You can now use the Promter class to use the methods in your Dart code, e.g.
+
+void main()
         {
             //craete a list of Options for a given question
             final options = [new Option('I like Green', '##00ff00'),
@@ -17,22 +38,12 @@ To use this library--
             final promter = new Promter();
 
             //Asking a multiple choice quesition along with passing the options for the question
-
-                //askMultiple() function takes two parammeter as argument
-                    => First argument is the question to ask
-                    => Second argument is the answers options for the given question
-                    ##this function return the option selected by the user
             String choosenAns = promter.askMultiple('What color do you like?', options);
 
-            //asking a binary type means Yes or No type Question
-                
-                //askMultiple() function takes one parammeter as argument
-                        => argument is the question to ask
-                        ##this function return the either TRUE or FALSE based on the value selected by the user. 
-                            => This returns true if user type y or yes 
-                            => This returns flase if user type f or false 
+            //asking a binary type means Yes or No type Question    
             bool ansBinary = promter.askBinary('Do you like This Lib?');
 
+            //displaying the result choosen by the user
             print(choosenAns);
             print(ansBinary);
         }

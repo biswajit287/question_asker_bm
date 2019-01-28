@@ -3,6 +3,7 @@ version: 0.0.1
 description: A Library to create a multiple choice and binary type questions CLI Wizard in dart
 author: Biswajit Mondal <biswajitmandal2807@gmail.com>
 homepage: https://www.google.com
+github: https://github.com/biswajit287/question_asker_bm
 
 environment:
   sdk: '<3.0.0'
