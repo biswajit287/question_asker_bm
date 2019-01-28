@@ -1,21 +1,20 @@
 import 'dart:io';
 import 'option.dart';
 
-//class for interacting with the terminal i.e reading and writing 
+///class for interacting with the terminal i.e reading and writing 
 class Terminal 
 {
   const Terminal();
+
+  ///printing the question to screen
   void printPromt(String promt)
   {
     stdout.writeln(promt);
   }
 
+  ///printing the options for question to screen
   void printOption(List<Option> options)
   {
-    // for(int i=0; i < options.length; i++){
-    //   stdout.writeln('[$i] - ${options[i].label}');
-    // }
-
     options.asMap().forEach((index,label){
       stdout.writeln('[$index] - ${options[index].label}');
     });
@@ -24,11 +23,13 @@ class Terminal
     stdout.write('>>>  ');
   }
 
+  ///getting the option selected by the user
   String colectInput()
   {
     return stdin.readLineSync();
   }
 
+  ///clearing the screen
   void clearScreen()
   {
     if(Platform.isWindows){

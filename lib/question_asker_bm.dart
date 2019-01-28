@@ -1,2 +1,3 @@
+///exporting the src files
 export 'src/option.dart';
-export 'src/promter.dart';
+export 'src/asker.dart';

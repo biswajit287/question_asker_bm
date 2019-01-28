@@ -14,10 +14,10 @@ Add the following import to your Dart code:
 ```dart
 import 'package:question_asker_bm/question_asker_bm.dart';
 ```
-Instantiate `Promter` class with the scopes you want:
+Instantiate `Asker` class with the scopes you want:
 
 ```dart
-final promter = new Promter();
+final asker = new Asker();
 ```
 ### List of Methods you can use: 
 ####    1. askMultiple(question,options)
@@ -31,26 +31,26 @@ final promter = new Promter();
                 a) This returns true if user type y or yes 
                 b) This returns flase if user type f or false 
 
-You can now use the `Promter` class to use the methods in your Dart code, e.g.
+You can now use the `Asker` class to use the methods in your Dart code, e.g.
 
 ```dart
 void main()
         {
             //craete a list of Options for a given question
-            final options = [new Option('I like Green', '##00ff00'),
+            final options = [new Option('I like Green', '#00ff00'),
                             new Option('I like White', '#FFFFFF')];
 
-            //creating the object of Promter class
-            final promter = new Promter();
+            //creating the object of Asker class
+            final asker = new Asker();
 
             //Asking a multiple choice quesition along with passing the options for the question
-            String choosenAns = promter.askMultiple('What color do you like?', options);
+            String choosenAns = asker.askMultiple('What color do you like?', options);
 
             //asking a binary type means Yes or No type Question    
-            bool ansBinary = promter.askBinary('Do you like This Lib?');
+            bool ansBinary = asker.askBinary('Do you like This Lib?');
 
             //displaying the result choosen by the user
-            print(choosenAns);
-            print(ansBinary);
+            print(choosenAns);  //#00ff00 or #FFFFFF
+            print(ansBinary);   //true or false
         }
 ```

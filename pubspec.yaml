@@ -1,8 +1,8 @@
 name: question_asker_bm
-version: 0.0.1
-description: A Library to create a multiple choice and binary type questions CLI Wizard in dart
+version: 0.0.2
+description: A Library to create a multiple choice and yes/no type questions CLI Wizard in dart
 author: Biswajit Mondal <biswajitmandal2807@gmail.com>
-homepage: https://www.google.com
+homepage: https://github.com/biswajit287/question_asker_bm
 github: https://github.com/biswajit287/question_asker_bm
 
 environment:
