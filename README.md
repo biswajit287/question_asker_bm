@@ -21,15 +21,15 @@ final promter = new Promter();
 ```
 ### List of Methods you can use: 
 ####    1. askMultiple(question,options)
-        > a) First argument is the question to ask
-        > b) Second argument is the list of answers(options) for the given question
-        ***Note***: This function returns the option selected by the user
+         a) First argument is the question to ask
+         b) Second argument is the list of answers(options) for the given question
+        *Note*: This function returns the option selected by the user
     
 ####  2. askBinary(question)
-        >  Takes an argument as the question to ask
-        ***Note***: This function return either TRUE or FALSE based on the value selected by the user. 
-               > a) This returns true if user type y or yes 
-               > b) This returns flase if user type f or false 
+        => Takes an argument as the question to ask
+        *Note*: This function return either TRUE or FALSE based on the value selected by the user. 
+                a) This returns true if user type y or yes 
+                b) This returns flase if user type f or false 
 
 You can now use the `Promter` class to use the methods in your Dart code, e.g.
 
